@@ -228,6 +228,28 @@
             ],
             "formatString": "0.0%;-0.0%;0.0%",
             "lineageTag": "58f64a6e-1137-4809-b0bb-3f8a17a862fb"
+          },
+          {
+            "name": "Running Total Sales",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "VAR CurrentDate = MAX(Dim_Date[Date])",
+              "RETURN",
+              "    CALCULATE(",
+              "        [Total Sales],",
+              "        FILTER(",
+              "            ALL(Dim_Date[Date]),",
+              "            Dim_Date[Date] <= CurrentDate",
+              "        )",
+              "    )"
+            ],
+            "lineageTag": "39b0756c-a622-4a74-bfe4-21704169c4cb"
           }
         ],
         "partitions": [
