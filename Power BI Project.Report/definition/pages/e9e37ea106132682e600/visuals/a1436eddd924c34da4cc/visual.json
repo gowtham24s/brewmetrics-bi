@@ -1,34 +1,54 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "409dbc245bcba5d84d50",
+  "name": "a1436eddd924c34da4cc",
   "position": {
-    "x": 1080,
-    "y": 576,
-    "z": 3006,
+    "x": 23.999999999999996,
+    "y": 696,
+    "z": 7000,
     "height": 360,
-    "width": 432,
-    "tabOrder": 3006
+    "width": 960,
+    "tabOrder": 7000
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_Product"
+                      "Entity": "Dim_City"
                     }
                   },
-                  "Property": "Item"
+                  "Property": "City"
                 }
               },
-              "queryRef": "Dim_Product.Item",
-              "nativeQueryRef": "Item"
+              "queryRef": "Dim_City.City",
+              "nativeQueryRef": "City",
+              "active": true
             },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Store"
+                    }
+                  },
+                  "Property": "Store Format"
+                }
+              },
+              "queryRef": "Dim_Store.Store Format",
+              "nativeQueryRef": "Store Format",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
             {
               "field": {
                 "Measure": {
@@ -42,20 +62,6 @@
               },
               "queryRef": "Fact_Sales.Total Sales",
               "nativeQueryRef": "Total Sales"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fact_Sales"
-                    }
-                  },
-                  "Property": "Item Rank"
-                }
-              },
-              "queryRef": "Fact_Sales.Item Rank",
-              "nativeQueryRef": "Item Rank"
             }
           ]
         }
@@ -70,34 +76,68 @@
                     "Entity": "Fact_Sales"
                   }
                 },
-                "Property": "Item Rank"
+                "Property": "Total Sales"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sales Performance by City'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "0e915173e6711ee41d0e",
+        "name": "1461abe97930d0c30364",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Dim_Product"
+                "Entity": "Dim_City"
               }
             },
-            "Property": "Item"
+            "Property": "City"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "234d5a3235869927ae00",
+        "name": "1a3e2420eb617c452762",
         "field": {
           "Measure": {
             "Expression": {
@@ -111,18 +151,18 @@
         "type": "Advanced"
       },
       {
-        "name": "14eec62402b6b36e7a00",
+        "name": "acc5dc7853d130945964",
         "field": {
-          "Measure": {
+          "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Fact_Sales"
+                "Entity": "Dim_Store"
               }
             },
-            "Property": "Item Rank"
+            "Property": "Store Format"
           }
         },
-        "type": "Advanced"
+        "type": "Categorical"
       }
     ]
   }

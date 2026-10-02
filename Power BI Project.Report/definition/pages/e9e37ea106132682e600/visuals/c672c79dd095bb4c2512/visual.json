@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "e0b068100cb195b3915a",
+  "name": "c672c79dd095bb4c2512",
   "position": {
-    "x": 704,
-    "y": 608,
-    "z": 3003,
-    "height": 192,
-    "width": 320,
-    "tabOrder": 3003
+    "x": 23.999999999999996,
+    "y": 144,
+    "z": 1000,
+    "height": 144,
+    "width": 383.99999999999994,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -51,12 +51,59 @@
         "isDefaultSort": true
       }
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total Sales'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "1b3dd1a3e45e209000c2",
+        "name": "c44ef4ac4e000b59356d",
         "field": {
           "Measure": {
             "Expression": {

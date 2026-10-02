@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "10dee4a03bc200db0054",
+  "name": "7ebe35e038564508c088",
   "position": {
-    "x": 960.00000000000011,
-    "y": 16,
-    "z": 3002,
-    "height": 176,
-    "width": 304,
-    "tabOrder": 3002
+    "x": 1656.0000000000002,
+    "y": 144,
+    "z": 8001,
+    "height": 144,
+    "width": 240,
+    "tabOrder": 8001
   },
   "visual": {
     "visualType": "slicer",
@@ -50,46 +50,51 @@
       ],
       "general": [
         {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
           "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "d",
-                    "Entity": "Dim_City",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "d"
-                                }
-                              },
-                              "Property": "City"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Bengaluru'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'City Filter'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
                     }
                   }
-                ]
+                }
               }
             }
           }
@@ -101,7 +106,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "f5e3ccfa83c33ba83058",
+        "name": "e1a26b4a1b469a987e90",
         "field": {
           "Column": {
             "Expression": {

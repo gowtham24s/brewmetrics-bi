@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "d2f02cb0c2ce3520acdd",
+  "name": "add51d2c74c506a51405",
   "position": {
-    "x": 47.999999999999993,
-    "y": 696,
-    "z": 3004,
-    "height": 318,
-    "width": 360,
-    "tabOrder": 3004
+    "x": 23.999999999999996,
+    "y": 312,
+    "z": 5000,
+    "height": 360,
+    "width": 960,
+    "tabOrder": 5000
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -27,8 +27,13 @@
                 }
               },
               "queryRef": "Dim_Date.Month",
-              "nativeQueryRef": "Month"
-            },
+              "nativeQueryRef": "Month",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
             {
               "field": {
                 "Measure": {
@@ -42,31 +47,50 @@
               },
               "queryRef": "Fact_Sales.Total Sales",
               "nativeQueryRef": "Total Sales"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fact_Sales"
-                    }
-                  },
-                  "Property": "MoM Growth %"
-                }
-              },
-              "queryRef": "Fact_Sales.MoM Growth %",
-              "nativeQueryRef": "MoM Growth %"
             }
           ]
         }
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Monthly Sales Trend'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "89c3176d40b0ac70c2a1",
+        "name": "c26ae5948bdab1e41d1e",
         "field": {
           "Column": {
             "Expression": {
@@ -80,7 +104,7 @@
         "type": "Categorical"
       },
       {
-        "name": "89b5245e0a613b1b166b",
+        "name": "1960ec024ab6cb62a6c3",
         "field": {
           "Measure": {
             "Expression": {
@@ -89,20 +113,6 @@
               }
             },
             "Property": "Total Sales"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "312129234409200494e1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Sales"
-              }
-            },
-            "Property": "MoM Growth %"
           }
         },
         "type": "Advanced"
