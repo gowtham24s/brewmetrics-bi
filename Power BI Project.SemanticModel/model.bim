@@ -213,6 +213,21 @@
             ],
             "expression": "SUM(Fact_Sales[sales_amount])",
             "lineageTag": "fd256dd2-1c29-4e3d-9b45-bcf98233640e"
+          },
+          {
+            "name": "MoM Growth %",
+            "expression": [
+              "",
+              "VAR PreviousMonthSales =",
+              "    CALCULATE(",
+              "        [Total Sales],",
+              "        DATEADD(Dim_Date[Date], -1, MONTH)",
+              "    )",
+              "RETURN",
+              "    DIVIDE([Total Sales] - PreviousMonthSales, PreviousMonthSales)"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "58f64a6e-1137-4809-b0bb-3f8a17a862fb"
           }
         ],
         "partitions": [
