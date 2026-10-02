@@ -268,6 +268,24 @@
             ],
             "formatString": "0",
             "lineageTag": "c70413e4-a9ac-4418-b491-55e692312861"
+          },
+          {
+            "name": "Average Transaction Value",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "expression": [
+              "",
+              "DIVIDE(",
+              "    [Total Sales],",
+              "    DISTINCTCOUNT(Fact_Sales[sale_id])",
+              ")"
+            ],
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "a43c6ac1-d948-41b3-a47d-34bea40cf3e2"
           }
         ],
         "partitions": [
