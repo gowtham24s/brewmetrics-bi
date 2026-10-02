@@ -1,0 +1,16 @@
+relationship AutoDetected_799b7846-3946-4bb2-abc2-bf12d9059f40
+	fromColumn: Fact_Sales.city
+	toColumn: Dim_City.City
+
+relationship AutoDetected_75416f7a-8af5-4fa6-9c2a-a57284bbc539
+	fromColumn: Fact_Sales.item
+	toColumn: Dim_Product.Item
+
+relationship AutoDetected_1f6da461-742e-4ac9-8aa7-65b6a910216a
+	fromColumn: Fact_Sales.store_format
+	toColumn: Dim_Store.'Store Format'
+
+relationship c8e62b0f-bc75-ce4f-18a1-5f8b57ad7f4c
+	fromColumn: Fact_Sales.date
+	toColumn: Dim_Date.Date
+
