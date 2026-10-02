@@ -250,6 +250,24 @@
               "    )"
             ],
             "lineageTag": "39b0756c-a622-4a74-bfe4-21704169c4cb"
+          },
+          {
+            "name": "Item Rank",
+            "expression": [
+              "",
+              "IF(",
+              "    ISINSCOPE(Dim_Product[Item]),",
+              "    RANKX(",
+              "        ALLSELECTED(Dim_Product[Item]),",
+              "        [Total Sales],",
+              "        ,",
+              "        DESC,",
+              "        DENSE",
+              "    )",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "c70413e4-a9ac-4418-b491-55e692312861"
           }
         ],
         "partitions": [
