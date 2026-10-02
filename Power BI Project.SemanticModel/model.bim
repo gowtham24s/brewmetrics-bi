@@ -286,6 +286,25 @@
             ],
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
             "lineageTag": "a43c6ac1-d948-41b3-a47d-34bea40cf3e2"
+          },
+          {
+            "name": "Cold Brew Sales %",
+            "expression": [
+              "",
+              "DIVIDE(",
+              "    CALCULATE(",
+              "        [Total Sales],",
+              "        REMOVEFILTERS(Dim_Product),",
+              "        Dim_Product[Item] = \"Cold Brew\"",
+              "    ),",
+              "    CALCULATE(",
+              "        [Total Sales],",
+              "        REMOVEFILTERS(Dim_Product)",
+              "    )",
+              ")"
+            ],
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "dc392868-c158-4f70-87af-971cfdd34022"
           }
         ],
         "partitions": [
