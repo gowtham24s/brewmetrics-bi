@@ -1,0 +1,527 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Fact_Sales\",\"Dim_Date\",\"Dim_City\",\"Dim_Product\",\"Dim_Store\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-IN",
+    "cultures": [
+      {
+        "name": "en-IN"
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "AutoDetected_799b7846-3946-4bb2-abc2-bf12d9059f40",
+        "fromColumn": "city",
+        "fromTable": "Fact_Sales",
+        "toColumn": "City",
+        "toTable": "Dim_City"
+      },
+      {
+        "name": "AutoDetected_75416f7a-8af5-4fa6-9c2a-a57284bbc539",
+        "fromColumn": "item",
+        "fromTable": "Fact_Sales",
+        "toColumn": "Item",
+        "toTable": "Dim_Product"
+      },
+      {
+        "name": "AutoDetected_1f6da461-742e-4ac9-8aa7-65b6a910216a",
+        "fromColumn": "store_format",
+        "fromTable": "Fact_Sales",
+        "toColumn": "Store Format",
+        "toTable": "Dim_Store"
+      },
+      {
+        "name": "c8e62b0f-bc75-ce4f-18a1-5f8b57ad7f4c",
+        "fromColumn": "date",
+        "fromTable": "Fact_Sales",
+        "toColumn": "Date",
+        "toTable": "Dim_Date"
+      }
+    ],
+    "sourceQueryCulture": "en-IN",
+    "tables": [
+      {
+        "name": "Fact_Sales",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "sale_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ad03035c-2081-4b05-919f-e56c71063fd4",
+            "sourceColumn": "sale_id",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "1abc6f41-2049-4862-9d2f-59c8b8171907",
+            "sourceColumn": "date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "city",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fa219268-90f2-4eb4-9850-037affbf5b66",
+            "sourceColumn": "city",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "store_format",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e78cdb17-17cb-4a60-a6ab-e7724b858451",
+            "sourceColumn": "store_format",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "111b4cae-1e39-42b3-b035-39ecfc43ab72",
+            "sourceColumn": "category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "item",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f673fa47-1f4a-4144-a398-e17ff40676cc",
+            "sourceColumn": "item",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "quantity",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "40753c24-be9e-46ac-985b-1cd023a16409",
+            "sourceColumn": "quantity",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "unit_price",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "981f9f2c-5682-4ed4-8b40-07ac16ab1e26",
+            "sourceColumn": "unit_price",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "sales_amount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "e2412a17-6d67-4323-99d6-46c4a0b1d1e3",
+            "sourceColumn": "sales_amount",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "8265ab56-441a-44d3-9f18-8a3727ce820e",
+        "measures": [
+          {
+            "name": "Total Sales",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "SUM(Fact_Sales[sales_amount])",
+            "lineageTag": "fd256dd2-1c29-4e3d-9b45-bcf98233640e"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact_Sales",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"D:\\Downloads\\brewmetrics_sales.csv\"),[Delimiter=\",\", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"sale_id\", Int64.Type}, {\"date\", type date}, {\"city\", type text}, {\"store_format\", type text}, {\"category\", type text}, {\"item\", type text}, {\"quantity\", Int64.Type}, {\"unit_price\", Int64.Type}, {\"sales_amount\", type number}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Date",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "isKey": true,
+            "lineageTag": "572f1e57-460b-4b66-a95c-a61962a8256c",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9bdd022f-7216-472f-b5d9-1dcb34aa15ac",
+            "sourceColumn": "Year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Month Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f1a39463-d5ea-41f7-988b-258691d8cd48",
+            "sourceColumn": "Month Number",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f35a721a-0741-4e21-9d6e-6b0ed61b0f9a",
+            "sortByColumn": "Month Number",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "55a7387f-1930-473f-a12a-1d25cd406702",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "sum"
+          }
+        ],
+        "dataCategory": "Time",
+        "lineageTag": "a8660440-c77a-456b-9842-bb92aeacbb23",
+        "partitions": [
+          {
+            "name": "Dim_Date",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Fact_Sales,",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"date\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\"),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Duplicates\",{{\"date\", \"Date\"}}),",
+                "    #\"Inserted Year\" = Table.AddColumn(#\"Renamed Columns\", \"Year\", each Date.Year([Date]), Int64.Type),",
+                "    #\"Inserted Month\" = Table.AddColumn(#\"Inserted Year\", \"Month\", each Date.Month([Date]), Int64.Type),",
+                "    #\"Inserted Month Name\" = Table.AddColumn(#\"Inserted Month\", \"Month Name\", each Date.MonthName([Date]), type text),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Inserted Month Name\",{{\"Month\", \"Month Number\"}, {\"Month Name\", \"Month\"}}),",
+                "    #\"Inserted Quarter\" = Table.AddColumn(#\"Renamed Columns1\", \"Quarter\", each Date.QuarterOfYear([Date]), Int64.Type)",
+                "in",
+                "    #\"Inserted Quarter\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_City",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8ad6ff61-4d9b-40cc-97e7-139bc7215270",
+            "sourceColumn": "City",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "5cdaaf1f-44c1-4234-9a56-582bc1bf5d89",
+        "partitions": [
+          {
+            "name": "Dim_City",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Fact_Sales,",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"city\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Other Columns\",{{\"city\", \"City\"}}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Renamed Columns\")",
+                "in",
+                "    #\"Removed Duplicates\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Product",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Item",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c66ed33e-fe9a-40a0-a008-40870ccdc796",
+            "sourceColumn": "Item",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Category",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "30726e86-8b8b-4ca4-93f7-dfdffbc29262",
+            "sourceColumn": "Category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Unit Price",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "848c8cc8-acb9-448d-bde8-f221b1cd37fa",
+            "sourceColumn": "Unit Price",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9efe9482-4129-4083-9740-9e1b6dd032be",
+        "partitions": [
+          {
+            "name": "Dim_Product",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Fact_Sales,",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"item\", \"category\", \"unit_price\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Other Columns\",{{\"item\", \"Item\"}, {\"category\", \"Category\"}, {\"unit_price\", \"Unit Price\"}}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Renamed Columns\")",
+                "in",
+                "    #\"Removed Duplicates\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Store",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Store Format",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c2365753-9af4-4881-9d24-0458a3562beb",
+            "sourceColumn": "Store Format",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "58721680-c290-4fec-8ad4-00ef18e24d46",
+        "partitions": [
+          {
+            "name": "Dim_Store",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Fact_Sales,",
+                "    #\"Removed Other Columns\" = Table.SelectColumns(Source,{\"store_format\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Other Columns\"),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Duplicates\",{{\"store_format\", \"Store Format\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ],
+    "valueFilterBehavior": "independent"
+  }
+}
